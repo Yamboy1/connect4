@@ -1,0 +1,50 @@
+name:                connect4
+version:             1.0.0.0
+github:              "Yamboy1/connect4"
+license:             BSD3
+author:              Yamboy1
+maintainer:          "yamboyd1@gmail.com"
+copyright:           "2021 Yamboy1"
+
+extra-source-files:
+- README.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/Yamboy1/connect4#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- matrix
+- vector
+- universe-base
+
+library:
+  source-dirs: src
+
+executables:
+  connect4:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - connect4
+
+tests:
+  connect4-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - connect4
