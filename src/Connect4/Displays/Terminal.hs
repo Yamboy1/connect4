@@ -1,4 +1,4 @@
-module Connect4.Display
+module Connect4.Displays.Terminal
   ( displayBoard
   , promptInput
   ) where

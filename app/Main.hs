@@ -1,6 +1,7 @@
 module Main where
 
 import qualified Connect4
+import qualified MyDiscord
 
 main :: IO ()
-main = Connect4.main
+main = MyDiscord.discord

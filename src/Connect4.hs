@@ -8,7 +8,7 @@ import Data.Matrix ( Matrix, zero )
 
 import Connect4.Board (placePiece)
 import Connect4.Check (checkBoard)
-import Connect4.Display (promptInput, displayBoard)
+import Connect4.Displays.Terminal (promptInput, displayBoard)
 import Connect4.Player (Player(..))
 
 main :: IO ()
